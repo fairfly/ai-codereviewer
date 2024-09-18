@@ -186,7 +186,7 @@ async function createReviewComment(
     });
 }
 
-async function main() {
+async function index() {
     const prDetails = await getPRDetails();
     let diff: string | null;
     const eventData = JSON.parse(
@@ -248,7 +248,7 @@ async function main() {
     }
 }
 
-main().catch((error) => {
+index().catch((error) => {
     console.error("Error:", error);
     process.exit(1);
 });
