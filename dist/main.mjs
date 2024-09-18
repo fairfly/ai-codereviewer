@@ -14,7 +14,7 @@ const ReviewSchema = z.object({
 });
 const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY = core.getInput("OPENAI_API_KEY");
-const OPENAI_API_MODEL = core.getInput("OPENAI_API_MODEL");
+const OPENAI_API_MODEL = "gpt-4o-2024-08-06";
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
