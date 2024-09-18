@@ -1,11 +1,12 @@
 import {readFileSync} from "fs";
 import * as core from "@actions/core";
 import OpenAI from "openai";
-import {Octokit} from "@octokit/rest";
 import parseDiff, {Chunk, File} from "parse-diff";
 import minimatch from "minimatch";
 import {zodResponseFormat} from "openai/helpers/zod";
 import {z} from "zod";
+
+const {Octokit} = await import("@octokit/rest");
 
 const ReviewSchema = z.object({
     reviews: z.array(
@@ -186,7 +187,7 @@ async function createReviewComment(
     });
 }
 
-async function index() {
+export async function main() {
     const prDetails = await getPRDetails();
     let diff: string | null;
     const eventData = JSON.parse(
@@ -248,7 +249,7 @@ async function index() {
     }
 }
 
-index().catch((error) => {
+main().catch((error) => {
     console.error("Error:", error);
     process.exit(1);
 });
