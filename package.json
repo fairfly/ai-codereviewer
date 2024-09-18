@@ -6,6 +6,7 @@
   "author": "Ville Saukkonen",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "build": "tsc",
     "package": "ncc build --source-map --license licenses.txt",
     "format": "prettier --write .",
@@ -19,9 +20,6 @@
     "parse-diff": "^0.11.1",
     "ts-node": "^10.9.1",
     "zod": "^3.23.8"
-  },
-  "scripts": {
-    "prepare": "husky install"
   },
   "devDependencies": {
     "husky": "^8.0.0",
