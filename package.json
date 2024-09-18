@@ -22,9 +22,9 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "husky": "^8.0.0",
     "@types/node": "^18.15.5",
     "@vercel/ncc": "^0.36.1",
+    "husky": "^8.0.3",
     "prettier": "^2.8.6",
     "typescript": "^5.0.2"
   }
