@@ -19,7 +19,7 @@ const ReviewSchema = z.object({
 
 const GITHUB_TOKEN: string = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY: string = core.getInput("OPENAI_API_KEY");
-const OPENAI_API_MODEL: string = core.getInput("OPENAI_API_MODEL");
+const OPENAI_API_MODEL: string = "gpt-4o-2024-08-06";
 
 const octokit = new Octokit({auth: GITHUB_TOKEN});
 
